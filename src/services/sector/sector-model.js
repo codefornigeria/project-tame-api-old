@@ -10,6 +10,7 @@ const Schema = mongoose.Schema;
 
 const sectorSchema = new Schema({
   name: { type: String, required: true },
+  active: {type:Boolean , 'default':false},
   createdAt: { type: Date, 'default': Date.now },
   updatedAt: { type: Date, 'default': Date.now }
 });
