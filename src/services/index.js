@@ -1,4 +1,8 @@
 'use strict';
+const authManagement = require('./authManagement');
+const emails = require('./emails');
+const messages = require('./messages');
+const entity = require('./entity');
 const group = require('./group');
 const department = require('./department');
 const sector = require('./sector');
@@ -24,4 +28,9 @@ module.exports = function() {
   app.configure(sector);
   app.configure(department);
   app.configure(group);
+  app.configure(entity);
+  app.configure(messages);
+  app.configure(emails);
+  app.configure(authManagement);
+  app.configure(authManagement);
 };
