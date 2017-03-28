@@ -10,6 +10,7 @@ const Schema = mongoose.Schema;
 
 const antidotesSchema = new Schema({
   name: { type: String, required: true },
+  description:{type:'String'},
   schemes:{type: Schema.Types.ObjectId , ref:'schemes'},
   location:{type: Schema.Types.ObjectId , ref:'location'},
   createdAt: { type: Date, 'default': Date.now },
